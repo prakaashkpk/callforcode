@@ -1,0 +1,26 @@
+[
+  {
+    "damId": 7,
+    "damname": "Sutlej Dam",
+    "damType": "Primary",
+    "damLatitude": 59.529171,
+    "damLongitude": 77.14426,
+    "damConnected": 3
+  },
+  {
+    "damId": 1,
+    "damname": "Idukki Dam",
+    "damType": "Primary",
+    "damLatitude": 19.529171,
+    "damLongitude": 87.14426,
+    "damConnected": 3
+  },
+  {
+    "damId": 3,
+    "damname": "Banasura Dam",
+    "damType": "Primary",
+    "damLatitude": 29.529171,
+    "damLongitude": 97.14426,
+    "damConnected": 0
+  }
+]
