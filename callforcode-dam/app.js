@@ -89,7 +89,7 @@ function logSensorData() {
         });
     });
 }
-setInterval(logSensorData, 1500);
+setInterval(logSensorData, 9000);
 
 /* Generate Calculations */
 function calculateDamStats() {

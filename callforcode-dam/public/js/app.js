@@ -82,7 +82,7 @@ $(document).ready(function() {
     function updateMap() {
         console.log('updateMap');
         $.ajax({
-          url: 'http://localhost:3000/api/damCalc',
+          url: 'http://dam-sensor-simulator-final.mybluemix.net/api/damCalc',
           method: "GET",
           success: function (data) {
               // console.log("DamCalc " + JSON.stringify(data));
@@ -95,7 +95,7 @@ $(document).ready(function() {
             // console.log("updateLoc: " + JSON.stringify(stats[1]));
 
             $.ajax({
-              url: 'http://localhost:3000/api/dams',
+              url: 'http://dam-sensor-simulator-final.mybluemix.net/api/dams',
               method: "GET",
               success: function(data) {
                 dams = data;
