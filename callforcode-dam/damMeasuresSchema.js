@@ -3,8 +3,8 @@ var damMeasuresSchema = {
     "properties": {
         "damMeasures": {
             "type": "array",
-            "minItems": 8,
-            "maxItems": 8,
+            "minItems": 10,
+            "maxItems": 10,
             "uniqueItems": true,
             "items": {
                 "type": "object",
@@ -71,7 +71,7 @@ var damMeasuresSchema = {
                     },
 
                 },
-                "required": ["id", "measuredate", "currentWaterLevel", "inflowRate", "outflowRate", "seepageRate", "predictedRainfall", "activeRainfall", "windSpeed", "evaporationRate"]
+                "required": ["damId", "id", "measuredate", "currentWaterLevel", "inflowRate", "outflowRate", "seepageRate", "predictedRainfall", "activeRainfall", "windSpeed", "evaporationRate"]
             }
         }
     },
