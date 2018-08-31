@@ -36,34 +36,33 @@ Front end app.js
 */
 
 
+var LeafIcon = L.Icon.extend({
+    options: {
+        shadowUrl: '',
+        iconSize: [48, 48],
+        shadowSize: [50, 64],
+        iconAnchor: [22, 94],
+        shadowAnchor: [4, 62],
+        popupAnchor: [-3, -76]
+    }
+});
+
+
+var greenIcon = new LeafIcon({
+    iconUrl: './images/location-green.png'
+});
+var redIcon = new LeafIcon({
+    iconUrl: './images/location-red.png'
+});
+var orangeIcon = new LeafIcon({
+    iconUrl: './images/location-orange.png'
+});
+
 $(document).ready(function() {
 
     var latitude = 9.529171;
     var longtitude = 77.14426;
     var access_token = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
-
-
-    var LeafIcon = L.Icon.extend({
-        options: {
-            shadowUrl: '',
-            iconSize: [48, 48],
-            shadowSize: [50, 64],
-            iconAnchor: [22, 94],
-            shadowAnchor: [4, 62],
-            popupAnchor: [-3, -76]
-        }
-    });
-
-    var greenIcon = new LeafIcon({
-            iconUrl: './images/location-green.png'
-        }),
-        redIcon = new LeafIcon({
-            iconUrl: './images/location-red.png'
-        }),
-        orangeIcon = new LeafIcon({
-            iconUrl: './images/location-green.png'
-        });
-
 
     var mymap = L.map('mapid').setView([9.8434, 76.9763], 9);
 
@@ -105,32 +104,39 @@ $(document).ready(function() {
                 for (i = 0; i < dams.length; i++) {
                     var dam = dams[i];
                     var stat = stats[i];
-                    var icon = greenIcon;
+                    var icon = orangeIcon;
                     var info = "";
+                    var color = "green";
 
-                    // var icon = i == 2 ? redIcon : greenIcon;
+                    // icon = i == 2 ? redIcon : greenIcon;
 
                     // Calculation
                     // {"id":1,"orangeLevel":197139,"greenLevel":202173,"redLevel":202173,"currentlevel":225}
                     if(stat !== undefined) {
-                        console.log('stat is undefined');
+                        // console.log('stat is undefined');
                         var min = Math.min(stat.greenLevel, stat.orangeLevel, stat.redLevel);
-                        console.log('i: ' + i + ', ' + JSON.stringify(stat));
+                        // console.log('i: ' + i + ', ' + JSON.stringify(stat));
                         if(min == stat.greenLevel) {
                             icon = greenIcon;
                             info = stat.greenLevel;
+                            color = "green";
                         } else if(min == stat.orangeLevel) {
                             icon = orangeIcon;
-                            info = stat.greenLevel;
-                        } else {
+                            info = stat.orangeLevel;
+                            color = "orange";
+                        } else if(min == stat.ge){
                             icon = redIcon;
-                            info = stat.greenLevel;
+                            info = stat.redLevel;
+                            color = "red";
                         }
+                        console.log('color: ' + color);
                     }
+
+                    // console.log('iconUrl: ' + JSON.stringify(icon));
 
                     var latitude = dam.damLatitude;
                     var longtitude = dam.damLongitude;
-                    console.log('lat, long: ' + latitude + ', ' + longtitude);
+                    // console.log('lat, long: ' + latitude + ', ' + longtitude);
 
                     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + access_token, {
                         maxZoom: 18,

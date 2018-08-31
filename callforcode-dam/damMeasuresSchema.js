@@ -31,14 +31,14 @@ var damMeasuresSchema = {
 
                     "inflowRate": {
                         type: "integer",
-                        minimum: 5000,
+                        minimum: 100,
                         maximum: 6000
                     },
 
                     "outflowRate": {
                         type: "integer",
                         minimum: 100,
-                        maximum: 1000
+                        maximum: 300
                     },
 
                     "seepageRate": {

@@ -54,7 +54,7 @@ app.get('/api/damCalc', function (req, res) {
         var upperLength = 4800
         var surface = 12080
 
-        var currVol = (12080 * waterLevel)/ 3
+        var currVol = (12080 * 1200)/ 3
         var greenVol = math.chain(12080).multiply(1350).divide(3).done()
         var orangeVol = math.chain(12080).multiply(1400).divide(3).done()
         var redVol = math.chain(12080).multiply(1430).divide(3).done()
