@@ -6,6 +6,10 @@ var app = require('express')(),
     jsf = require('json-schema-faker'),
     damMeasuresSchema = require('./damMeasuresSchema.js'),
     math = require('mathjs');
+var cfenv = require('cfenv');
+var appEnv = cfenv.getAppEnv();
+var hostname = appEnv.host;
+var port = appEnv.port;
 
 app.use(express.static('./public'))
 app.engine('html', swig.renderFile);
@@ -95,5 +99,5 @@ function calculateDamStats() {
      });
 }
 
-app.listen(3000);
+app.listen(port);
 console.log('Application Started on http://localhost:3000/');
