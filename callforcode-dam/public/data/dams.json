@@ -1,0 +1,82 @@
+[
+  {
+    "damId": 1,
+    "damname": "Idukki Dam",
+    "damType": "Primary",
+    "damLatitude": 9.844338,
+    "damLongitude": 76.9740693,
+    "damConnected": 0
+  },
+  {
+    "damId": 2,
+    "damname": "Mullaperiyar Dam",
+    "damType": "Primary",
+    "damLatitude": 9.528843,
+    "damLongitude": 77.1421033,
+    "damConnected": 0
+  },
+  {
+    "damId": 3,
+    "damname": "Thenmala Dam",
+    "damType": "Primary",
+    "damLatitude": 8.95,
+    "damLongitude": 77.0700333,
+    "damConnected": 0
+  },
+  {
+    "damId": 4,
+    "damname": "Parambikulam Dam",
+    "damType": "Primary",
+    "damLatitude": 10.377778,
+    "damLongitude": 76.7619783,
+    "damConnected": 0
+  },
+  {
+    "damId": 5,
+    "damname": "Cheruthoni Dam",
+    "damType": "Primary",
+    "damLatitude": 9.8457682,
+    "damLongitude": 76.9670515,
+    "damConnected": 0
+  },
+  {
+    "damId": 6,
+    "damname": "Banasura Sagar Dam",
+    "damType": "Primary",
+    "damLatitude": 11.67,
+    "damLongitude": 75.9555893,
+    "damConnected": 0
+  },
+  {
+    "damId": 7,
+    "damname": "Malampuzha Dam",
+    "damType": "Primary",
+    "damLatitude": 10.8305746,
+    "damLongitude": 76.6816163,
+    "damConnected": 0
+  },
+  {
+    "damId": 8,
+    "damname": "Mattupetty Dam",
+    "damType": "Primary",
+    "damLatitude": 10.1063903,
+    "damLongitude": 77.1238008,
+    "damConnected": 0
+  },
+  {
+    "damId": 9,
+    "damname": "Kanjirapuzha Dam",
+    "damType": "Primary",
+    "damLatitude": 10.9853627,
+    "damLongitude": 76.5385669,
+    "damConnected": 0
+  },
+  {
+    "damId": 10,
+    "damname": "Idamalayar Dam",
+    "damType": "Primary",
+    "damLatitude": 10.2216337,
+    "damLongitude": 76.7041812,
+    "damConnected": 0
+  }
+]
