@@ -1,10 +1,11 @@
+// test
 var damMeasuresSchema = {
     "type": "object",
     "properties": {
         "damMeasures": {
             "type": "array",
-            "minItems": 10,
-            "maxItems": 10,
+            "minItems": 8,
+            "maxItems": 8,
             "uniqueItems": true,
             "items": {
                 "type": "object",
@@ -30,32 +31,32 @@ var damMeasuresSchema = {
 
                     "inflowRate": {
                         type: "integer",
-                        minimum: 0,
-                        maximum: 5
+                        minimum: 5000,
+                        maximum: 6000
                     },
 
                     "outflowRate": {
                         type: "integer",
-                        minimum: 0,
-                        maximum: 5
+                        minimum: 100,
+                        maximum: 1000
                     },
 
                     "seepageRate": {
                         type: "integer",
-                        minimum: 0,
-                        maximum: 5
+                        minimum: 300,
+                        maximum: 400
                     },
 
                     "predictedRainfall": {
                         type: "integer",
-                        minimum: 0,
-                        maximum: 10
+                        minimum: 50,
+                        maximum: 100
                     },
 
                     "activeRainfall": {
                         type: "integer",
-                        minimum: 0,
-                        maximum: 10
+                        minimum: 50,
+                        maximum: 100
                     },
 
                     "windSpeed": {
@@ -71,7 +72,7 @@ var damMeasuresSchema = {
                     },
 
                 },
-                "required": ["damId", "id", "measuredate", "currentWaterLevel", "inflowRate", "outflowRate", "seepageRate", "predictedRainfall", "activeRainfall", "windSpeed", "evaporationRate"]
+                "required": ["id", "measuredate", "currentWaterLevel", "inflowRate", "outflowRate", "seepageRate", "predictedRainfall", "activeRainfall", "windSpeed", "evaporationRate"]
             }
         }
     },
